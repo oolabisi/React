@@ -1,15 +1,15 @@
 import React, { useReducer, useEffect } from "react";
-//import "../App.css";
-//import Header from "./Header";
 import Movie from "./movie";
-//import Search from "./Search";
 import Searchbar from "./SearchBar";
-const MOVIE_API_URL = "https://www.omdbapi.com/?s=man&apikey=4a3b711b";
+
+const MOVIE_API_URL = "https://www.omdbapi.com/apikey=59e1ba94";
+
 const initialState = {
   loading: true,
   movies: [],
   errorMessage: null
 };
+
 const reducer = (state, action) => {
   switch (action.type) {
     case "SEARCH_MOVIES_REQUEST":
@@ -34,6 +34,7 @@ const reducer = (state, action) => {
       return state;
   }
 };
+
 const App = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   useEffect(() => {
@@ -46,11 +47,12 @@ const App = () => {
         });
       });
   }, []);
+
   const search = searchValue => {
     dispatch({
       type: "SEARCH_MOVIES_REQUEST"
     });
-    fetch(`https://www.omdbapi.com/?s=${searchValue}&apikey=4a3b711b`)
+    fetch(`https://www.omdbapi.com/?s=${searchValue}&apikey=59e1ba94`)
       .then(response => response.json())
       .then(jsonResponse => {
         if (jsonResponse.Response === "True") {
@@ -66,16 +68,17 @@ const App = () => {
         }
       });
   };
+
   const { movies, errorMessage, loading } = state;
   return (
-    <div className="App">
+    <div>
       <Searchbar search={search} />
-      <p className="App-intro">Sharing a few of our favourite movies</p>
-      <div className="movies">
+      <p>Sharing a few of our favourite movies</p>
+      <div>
         {loading && !errorMessage ? (
           <span>loading... </span>
         ) : errorMessage ? (
-          <div className="errorMessage">{errorMessage}</div>
+          <div>{errorMessage}</div>
         ) : (
           movies.map((movie, index) => (
             <Movie key={`${index}-${movie.Title}`} movie={movie} />
@@ -86,5 +89,3 @@ const App = () => {
   );
 };
 export default App;
-
-// <Header text="HOOKED" />

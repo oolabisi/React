@@ -1,16 +1,8 @@
 import React, { useState } from "react";
 
-//const Searchbar = ({ searchfield }) => {
-
-// return (
-//  <div>
-// <input type="text" placeholder="search for any movies" />
-//   <button onClick={searchfield}>search</button>
-// </div>
-// );
-
 const Searchbar = props => {
   const [searchValue, setSearchValue] = useState("");
+
   const handleSearchInputChanges = e => {
     setSearchValue(e.target.value);
   };
@@ -23,13 +15,14 @@ const Searchbar = props => {
     resetInputField();
   };
   return (
-    <form className="search">
+    <form>
       <input
         value={searchValue}
         onChange={handleSearchInputChanges}
         type="text"
+        placeholder="search movies here"
       />
-      <input onClick={callSearchFunction} type="submit" value="SEARCH" />
+      <input onClick={callSearchFunction} type="submit" value="search" />
     </form>
   );
 };
