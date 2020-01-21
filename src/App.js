@@ -71,12 +71,16 @@ const App = () => {
 
   const { movies, errorMessage, loading } = state;
   return (
-    <div>
-      <Searchbar search={search} />
-      <p>Sharing a few of our favourite movies</p>
+    <div className="tc">
+      <h1 className="f2 helvetica bg-blue pa10 col-3">
+        Welcome to your Movie Place
+      </h1>
+      <div className="f3 br-pill dark-blue no-underline ba pv2 ph3 dib">
+        <Searchbar search={search} />
+      </div>
       <div>
         {loading && !errorMessage ? (
-          <span>loading... </span>
+          <span> </span>
         ) : errorMessage ? (
           <div>{errorMessage}</div>
         ) : (

@@ -22,7 +22,12 @@ const Searchbar = props => {
         type="text"
         placeholder="search movies here"
       />
-      <input onClick={callSearchFunction} type="submit" value="search" />
+      <input
+        onClick={callSearchFunction}
+        className="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-blue"
+        type="submit"
+        value="search"
+      />
     </form>
   );
 };
