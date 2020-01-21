@@ -89,6 +89,9 @@ const App = () => {
           ))
         )}
       </div>
+      <div>
+        <p className=" tc">powered by Expressjs</p>
+      </div>
     </div>
   );
 };
