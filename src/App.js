@@ -71,9 +71,9 @@ const App = () => {
 
   const { movies, errorMessage, loading } = state;
   return (
-    <div className="tc">
-      <h1 className="f2 helvetica bg-blue pa10 col-3">
-        Welcome to your Movie Place
+    <div className=" bg-animate tc bg-lightest-blue">
+      <h1 className="f2 helvetica bg-orange col-3">
+        Welcome to Olabisi Movie Place
       </h1>
       <div className="f3 br-pill dark-blue no-underline ba pv2 ph3 dib">
         <Searchbar search={search} />
