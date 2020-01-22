@@ -72,10 +72,10 @@ const App = () => {
   const { movies, errorMessage, loading } = state;
   return (
     <div className="tc ma2">
-      <h1 className="f2 br-pill bg-orange courier i dark-blue">
+      <h1 className="f2 br-pill bg-orange courier i white">
         Welcome to Olabisi Movie Place
       </h1>
-      <div className="f5 br-pill blue no-underline ba pv1 ph1 dib">
+      <div className="f5 br-pill orange no-underline ba pv1 ph1 dib">
         <Searchbar search={search} />
       </div>
       <div>
@@ -90,7 +90,7 @@ const App = () => {
         )}
       </div>
       <div>
-        <p className="bg-orange br-pill ma7 tc i dark-blue">
+        <p className="bg-orange br-pill ma7 tc i white">
           powered by Expressjs.
         </p>
       </div>

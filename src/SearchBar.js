@@ -24,7 +24,7 @@ const Searchbar = props => {
       />
       <input
         onClick={callSearchFunction}
-        className="f6 hover-gray no-underline br-pill ph3 pv1 blue bg-grey"
+        className="f6 hover-gray no-underline br-pill ph3 pv1 orange bg-grey"
         type="submit"
         value="search"
       />
