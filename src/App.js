@@ -71,11 +71,11 @@ const App = () => {
 
   const { movies, errorMessage, loading } = state;
   return (
-    <div className=" bg-animate tc bg-lightest-blue">
-      <h1 className="f2 helvetica bg-orange col-3">
+    <div className="tc ma2">
+      <h1 className="f2 br-pill bg-orange courier i dark-blue">
         Welcome to Olabisi Movie Place
       </h1>
-      <div className="f3 br-pill dark-blue no-underline ba pv2 ph3 dib">
+      <div className="f5 br-pill blue no-underline ba pv1 ph1 dib">
         <Searchbar search={search} />
       </div>
       <div>
@@ -90,7 +90,9 @@ const App = () => {
         )}
       </div>
       <div>
-        <p className=" tc">powered by Expressjs</p>
+        <p className="bg-orange br-pill ma7 tc i dark-blue">
+          powered by Expressjs.
+        </p>
       </div>
     </div>
   );
